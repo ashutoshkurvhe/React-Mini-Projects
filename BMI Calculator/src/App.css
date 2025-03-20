@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --text-dark: #333;
+  --text-light: #fff;
+  --border-color: #e0e0e0;
+  --bg-light: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-text: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-container input,
+.input-container {
+  margin: auto;
+  width: 200px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.result {
+  margin-top: 5px;
+  padding: 5px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  text-shadow: 1px 1px 2px var(--shadow-text);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+p,
+.result,
+.category {
+  text-align: center;
+  min-height: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
