@@ -50,11 +50,11 @@ Brief description of the project
 
 Clone the repository:
 
-git clone https://github.com/your-username/react-mini-projects.git
+git clone https://github.com/ashutoshkurvhe/React-Mini-Projects.git
 
 Navigate to a specific project folder:
 
-cd react-mini-projects/project-name
+cd React-Mini-Projects.git
 
 Install dependencies:
 
